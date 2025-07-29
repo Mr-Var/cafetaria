@@ -23,7 +23,7 @@ export default function Cafetaria() {
             onClick={() => toggleSeat(index)}
             className={`w-16 h-16 rounded-2xl text-white font-bold shadow-md transition-colors duration-200 ${
               booked ? 'bg-red-500' : 'bg-green-500 hover:bg-green-600'
-            }`}
+            }}
           >
             {index + 1}
           </button>
