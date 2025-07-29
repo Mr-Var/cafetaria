@@ -4,9 +4,7 @@ const NUM_ROWS = 3;
 const NUM_COLS = 4;
 
 export default function Cafetaria() {
-  const [seats, setSeats] = useState(
-    Array(NUM_ROWS * NUM_COLS).fill(false)
-  );
+  const [seats, setSeats] = useState(Array(NUM_ROWS * NUM_COLS).fill(false));
 
   const toggleSeat = (index) => {
     const updated = [...seats];
@@ -23,7 +21,9 @@ export default function Cafetaria() {
           <button
             key={index}
             onClick={() => toggleSeat(index)}
-            className={\`w-16 h-16 rounded-2xl text-white font-bold shadow-md transition-colors duration-200 \${booked ? 'bg-red-500' : 'bg-green-500 hover:bg-green-600'}\`}
+            className={`w-16 h-16 rounded-2xl text-white font-bold shadow-md transition-colors duration-200 ${
+              booked ? 'bg-red-500' : 'bg-green-500 hover:bg-green-600'
+            }`}
           >
             {index + 1}
           </button>
